@@ -35,6 +35,28 @@ def atualizar(dicionario):
         
     return 0
 
+def menu(dados):
+    print("======= MENU =======")
+    print("""1 - Adicionar Elemento
+2 - Excluir Elemento
+3 - Atualizar Elemento
+4 - Ver Elementos
+5 - Sair""")
+    acao = int(input("Escolha sua ação de 1 - 5: "))
+
+    match acao:
+        case 1:
+            adicionar(dados)
+        case 2:
+            atualizar(dados)
+        case 3:
+            atualizar(dados)
+        case 4:
+            print(dados)  
+        case 5:
+            return 0      
+    return menu(dados)
+
 klinck ={
     "k" : 34,
     "j" : 34,
@@ -51,4 +73,4 @@ def personalizada():
     idade = int(input(""))
     return print(f"Olá, {nome} você possui {idade} anos")
 
-atualizar(klinck)
+menu(klinck)
